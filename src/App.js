@@ -530,59 +530,7 @@ const CoincheTournamentSite = () => {
                     type="text"
                     value={tournamentData.name}
                     onChange={(e) => setTournamentData({...tournamentData, name: e.target.value})}
-                    placeholder="Nom du premier joueur"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Joueur 2 *
-                  </label>
-                  <input
-                    type="text"
-                    value={teamData.player2}
-                    onChange={(e) => setTeamData({...teamData, player2: e.target.value})}
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Nom du second joueur"
-                  />
-                </div>
-
-                <div className="flex gap-3 pt-4">
-                  <button
-                    onClick={handleTeamRegistration}
-                    className="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition"
-                  >
-                    {editingTeam ? 'Modifier' : 'Inscrire'}
-                  </button>
-                  <button
-                    onClick={cancelForms}
-                    className="px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded-lg font-semibold transition"
-                  >
-                    Annuler
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-      </main>
-
-      <footer className="bg-gray-800 text-white py-8 mt-16">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Trophy className="w-6 h-6" />
-            <span className="text-lg font-semibold">Tournois de Coinche</span>
-          </div>
-          <p className="text-gray-400">
-            La plateforme de référence pour vos tournois de coinche
-          </p>
-        </div>
-      </footer>
-    </div>
-  );
-};
-
-export default CoincheTournamentSite;
                     placeholder="Ex: Tournoi de Printemps"
                   />
                 </div>
@@ -678,3 +626,56 @@ export default CoincheTournamentSite;
                     value={teamData.player1}
                     onChange={(e) => setTeamData({...teamData, player1: e.target.value})}
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Nom du premier joueur"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Joueur 2 *
+                  </label>
+                  <input
+                    type="text"
+                    value={teamData.player2}
+                    onChange={(e) => setTeamData({...teamData, player2: e.target.value})}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Nom du second joueur"
+                  />
+                </div>
+
+                <div className="flex gap-3 pt-4">
+                  <button
+                    onClick={handleTeamRegistration}
+                    className="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition"
+                  >
+                    {editingTeam ? 'Modifier' : 'Inscrire'}
+                  </button>
+                  <button
+                    onClick={cancelForms}
+                    className="px-4 py-2 bg-gray-500 hover:bg-gray-600 text-white rounded-lg font-semibold transition"
+                  >
+                    Annuler
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </main>
+
+      <footer className="bg-gray-800 text-white py-8 mt-16">
+        <div className="container mx-auto px-4 text-center">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <Trophy className="w-6 h-6" />
+            <span className="text-lg font-semibold">Tournois de Coinche</span>
+          </div>
+          <p className="text-gray-400">
+            La plateforme de référence pour vos tournois de coinche
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default CoincheTournamentSite;
